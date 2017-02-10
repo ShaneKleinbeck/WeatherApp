@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/ShaneKleinbeck/WeatherApp/issues"
   },
-  "homepage": "https://github.com/ShaneKleinbeck/WeatherApp#readme"
+  "homepage": "https://github.com/ShaneKleinbeck/WeatherApp#readme",
+  "devDependencies": {
+    "express": "^4.14.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "hover.css": "^2.0.2"
+  }
 }
