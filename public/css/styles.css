@@ -1,0 +1,49 @@
+body {
+  max-height: 100vh;
+  font-family: serif; }
+
+.weather-main {
+  background-color: lightblue;
+  height: 75%; }
+
+.seven-day-forecast {
+  background-color: lightgreen;
+  height: 25%; }
+  .seven-day-forecast .current-day-forecast {
+    text-align: center; }
+    .seven-day-forecast .current-day-forecast .current-day-left {
+      height: 100%; }
+      .seven-day-forecast .current-day-forecast .current-day-left #currentTemp {
+        font-size: 11em;
+        margin-bottom: 0; }
+      .seven-day-forecast .current-day-forecast .current-day-left .degree {
+        font-size: .4em;
+        position: absolute;
+        padding-top: .2em; }
+      .seven-day-forecast .current-day-forecast .current-day-left #currentDay {
+        font-size: 1.5em;
+        margin-top: 0;
+        /*border-radius: 2em;
+                border-width: 2px;*/
+        position: relative;
+        /*background-color: #b6b7ba;*/ }
+    .seven-day-forecast .current-day-forecast .current-day-right {
+      height: 100%; }
+      .seven-day-forecast .current-day-forecast .current-day-right .currentIcon {
+        font-size: 8em;
+        position: relative;
+        margin-bottom: 0;
+        padding-top: .6em;
+        padding-right: 1em; }
+  .seven-day-forecast .remaining-days-forecast {
+    text-align: center;
+    height: 100%; }
+    .seven-day-forecast .remaining-days-forecast .remaining-day {
+      height: 100%;
+      background-color: orange;
+      border-left: 1px solid #7f0000;
+      border-left: 1px solid rgba(255, 0, 0, 0);
+      -webkit-background-clip: padding-box;
+      /* for Safari */
+      background-clip: padding-box;
+      /* for IE9+, Firefox 4+, Opera, Chrome */ }

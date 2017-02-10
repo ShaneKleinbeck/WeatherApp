@@ -1,0 +1,51 @@
+body{
+    max-height: 100vh;
+    font-family: serif;
+}
+
+.weather-main{
+    background-color: lightblue;
+    height: 75%;
+}
+.seven-day-forecast{
+    background-color: lightgreen;
+    height: 25%;
+    .current-day-forecast {
+        text-align: center;
+        .current-day-left{
+            height: 100%;
+            #currentTemp{
+                font-size: 11em;
+                margin-bottom: 0; }
+            .degree{
+                font-size: .4em;
+                position: absolute;
+                padding-top: .2em; }
+            #currentDay{
+                font-size: 1.5em;
+                margin-top: 0;
+                /*border-radius: 2em;
+                border-width: 2px;*/
+                position: relative;
+                /*background-color: #b6b7ba;*/ } }
+        .current-day-right{
+            height: 100%;
+            .currentIcon{
+                font-size: 8em;
+                position: relative;
+                margin-bottom: 0;
+                padding-top: .6em;
+                padding-right: 1em; } } }
+    .remaining-days-forecast{
+        text-align: center;
+        height: 100%;
+        .remaining-day{
+            height: 100%;
+            background-color: orange;
+            border-left: 1px solid rgb(127, 0, 0);
+            border-left: 1px solid rgba(255, 0, 0, .0);
+            -webkit-background-clip: padding-box; /* for Safari */
+            background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+        }
+    }
+}
