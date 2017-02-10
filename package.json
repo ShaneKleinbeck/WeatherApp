@@ -1,0 +1,19 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "\"# WeatherApp\" \r \"# WeatherApp\" \r \"# WeatherApp\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaneKleinbeck/WeatherApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShaneKleinbeck/WeatherApp/issues"
+  },
+  "homepage": "https://github.com/ShaneKleinbeck/WeatherApp#readme"
+}
