@@ -11,16 +11,16 @@ body {
   .seven-day-forecast .current-day-forecast {
     text-align: center;
     background-color: lightgreen; }
-    .seven-day-forecast .current-day-forecast .current-day-left {
+    .seven-day-forecast .current-day-forecast #current-day-left {
       height: 100%; }
-      .seven-day-forecast .current-day-forecast .current-day-left #currentTemp {
+      .seven-day-forecast .current-day-forecast #current-day-left #currentTemp {
         font-size: 11em;
         margin-bottom: 0; }
-      .seven-day-forecast .current-day-forecast .current-day-left .degree {
+      .seven-day-forecast .current-day-forecast #current-day-left .degree {
         font-size: .4em;
         position: absolute;
         padding-top: .2em; }
-      .seven-day-forecast .current-day-forecast .current-day-left #currentDay {
+      .seven-day-forecast .current-day-forecast #current-day-left #currentDay {
         font-size: 1.5em;
         margin-top: 0;
         position: relative; }

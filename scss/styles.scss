@@ -12,10 +12,11 @@ body{
     .current-day-forecast {
         text-align: center;
         background-color: lightgreen;
-        .current-day-left{
+        #current-day-left{
             height: 100%;
             #currentTemp{
                 font-size: 11em;
+                // margin-top: .5em;
                 margin-bottom: 0; }
             .degree{
                 font-size: .4em;
