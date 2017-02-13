@@ -1,5 +1,4 @@
 body {
-  max-height: 100vh;
   font-family: serif; }
 
 .weather-main {
@@ -10,7 +9,8 @@ body {
   background-color: lightgreen;
   height: 25%; }
   .seven-day-forecast .current-day-forecast {
-    text-align: center; }
+    text-align: center;
+    background-color: lightgreen; }
     .seven-day-forecast .current-day-forecast .current-day-left {
       height: 100%; }
       .seven-day-forecast .current-day-forecast .current-day-left #currentTemp {
@@ -23,10 +23,7 @@ body {
       .seven-day-forecast .current-day-forecast .current-day-left #currentDay {
         font-size: 1.5em;
         margin-top: 0;
-        /*border-radius: 2em;
-                border-width: 2px;*/
-        position: relative;
-        /*background-color: #b6b7ba;*/ }
+        position: relative; }
     .seven-day-forecast .current-day-forecast .current-day-right {
       height: 100%; }
       .seven-day-forecast .current-day-forecast .current-day-right .currentIcon {
@@ -34,7 +31,11 @@ body {
         position: relative;
         margin-bottom: 0;
         padding-top: .6em;
-        padding-right: 1em; }
+        overflow: hidden; }
+      .seven-day-forecast .current-day-forecast .current-day-right #currentWind {
+        font-size: 1.5em;
+        margin-top: .5em;
+        position: relative; }
   .seven-day-forecast .remaining-days-forecast {
     text-align: center;
     height: 100%; }
@@ -47,3 +48,12 @@ body {
       /* for Safari */
       background-clip: padding-box;
       /* for IE9+, Firefox 4+, Opera, Chrome */ }
+      .seven-day-forecast .remaining-days-forecast .remaining-day .vmiddle {
+        font-size: 2.5em;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); }
+        .seven-day-forecast .remaining-days-forecast .remaining-day .vmiddle .remaining-day-text {
+          font-size: .6em; }
+        .seven-day-forecast .remaining-days-forecast .remaining-day .vmiddle .remaining-day-icon {
+          padding: .8em 0 .8em 0; }

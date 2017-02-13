@@ -1,5 +1,4 @@
 body{
-    max-height: 100vh;
     font-family: serif;
 }
 
@@ -12,6 +11,7 @@ body{
     height: 25%;
     .current-day-forecast {
         text-align: center;
+        background-color: lightgreen;
         .current-day-left{
             height: 100%;
             #currentTemp{
@@ -24,10 +24,7 @@ body{
             #currentDay{
                 font-size: 1.5em;
                 margin-top: 0;
-                /*border-radius: 2em;
-                border-width: 2px;*/
-                position: relative;
-                /*background-color: #b6b7ba;*/ } }
+                position: relative; } }
         .current-day-right{
             height: 100%;
             .currentIcon{
@@ -35,7 +32,11 @@ body{
                 position: relative;
                 margin-bottom: 0;
                 padding-top: .6em;
-                padding-right: 1em; } } }
+                overflow: hidden; }
+            #currentWind{
+                    font-size: 1.5em;
+                    margin-top: .5em;
+                    position: relative; } } }
     .remaining-days-forecast{
         text-align: center;
         height: 100%;
@@ -46,6 +47,16 @@ body{
             border-left: 1px solid rgba(255, 0, 0, .0);
             -webkit-background-clip: padding-box; /* for Safari */
             background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+            .vmiddle{
+                font-size: 2.5em;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%); 
+                .remaining-day-text {
+                    font-size: .6em; }
+                .remaining-day-icon {
+                    padding: .8em 0 .8em 0; }
+            }
         }
     }
 }
