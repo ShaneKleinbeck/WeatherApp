@@ -1,14 +1,16 @@
 body{
     font-family: serif;
+    max-height: 100vh;
+    height: 100vh;
 }
 
 .weather-main{
     background-color: lightblue;
-    height: 75%;
+    height: 75vh;
 }
 .seven-day-forecast{
     background-color: lightgreen;
-    height: 25%;
+    height: 25vh;
     .current-day-forecast {
         text-align: center;
         background-color: lightgreen;
@@ -16,7 +18,6 @@ body{
             height: 100%;
             #currentTemp{
                 font-size: 11em;
-                // margin-top: .5em;
                 margin-bottom: 0; }
             .degree{
                 font-size: .4em;

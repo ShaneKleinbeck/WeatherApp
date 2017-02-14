@@ -38,11 +38,10 @@
 					<div class="row">
 						<div class="col-xs-6" id="current-day-left">
 							<h1 id="currentTemp"><%= Math.round(data["currently"]["temperature"])%><span class="degree">º</span></h1>
-							<h5 id="currentDay">Monday, 27th</h5>
 						</div>
 						<div class="col-xs-6 current-day-right">
 							<i class="wi wi-day-cloudy currentIcon"></i>
-							<h5 id="currentWind">4 mph</h5>
+							<h5 id="currentWind"><%= Math.round(data["currently"]["windSpeed"])%> mph</h5>
 						</div>
 					</div>
 				</div>
@@ -50,7 +49,7 @@
 					<div class="row remaining-days-forecast">
 						<div class="col-xs-2 remaining-day">
 							<div class="vmiddle">
-								<h5 class="remaining-day-text">MON</h5>
+								<h5 class="remaining-day-text"><%= data["daily"]["data"][0]["time"] %></h5>
 								<i class="wi wi-day-cloudy remaining-day-icon"></i>
 								<h5 class="remaining-day-text">80º</h5>
 							</div>

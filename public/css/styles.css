@@ -1,13 +1,15 @@
 body {
-  font-family: serif; }
+  font-family: serif;
+  max-height: 100vh;
+  height: 100vh; }
 
 .weather-main {
   background-color: lightblue;
-  height: 75%; }
+  height: 75vh; }
 
 .seven-day-forecast {
   background-color: lightgreen;
-  height: 25%; }
+  height: 25vh; }
   .seven-day-forecast .current-day-forecast {
     text-align: center;
     background-color: lightgreen; }
