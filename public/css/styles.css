@@ -16,7 +16,7 @@ body {
     .seven-day-forecast .current-day-forecast #current-day-left {
       height: 100%; }
       .seven-day-forecast .current-day-forecast #current-day-left #currentTemp {
-        font-size: 11em;
+        font-size: 9em;
         margin-bottom: 0; }
       .seven-day-forecast .current-day-forecast #current-day-left .degree {
         font-size: .4em;
@@ -29,7 +29,7 @@ body {
     .seven-day-forecast .current-day-forecast .current-day-right {
       height: 100%; }
       .seven-day-forecast .current-day-forecast .current-day-right .currentIcon {
-        font-size: 8em;
+        font-size: 6.5em;
         position: relative;
         margin-bottom: 0;
         padding-top: .6em;
