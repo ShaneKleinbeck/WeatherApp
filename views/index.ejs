@@ -37,11 +37,11 @@
 				<div class="col-lg-4 current-day-forecast">
 					<div class="row">
 						<div class="col-xs-6" id="current-day-left">
-							<h1 id="currentTemp"><%= Math.round(data["currently"]["temperature"])%><span class="degree">º</span></h1>
+							<h1 id="currentTemp">85<span class="degree">º</span></h1>
 						</div>
 						<div class="col-xs-6 current-day-right">
-							<i class="wi wi-day-cloudy currentIcon"></i>
-							<h5 id="currentWind"><%= Math.round(data["currently"]["windSpeed"])%> mph</h5>
+							<img src="/public/media/SVG/<%= newIcon %>" class="currentIcon"></img>
+							<h5 id="currentWind">mph</h5>
 						</div>
 					</div>
 				</div>
@@ -100,6 +100,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="public/js/index.js"></script>
+<script src="public/js/date.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 

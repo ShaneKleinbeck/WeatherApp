@@ -1,7 +1,7 @@
 {
   "name": "weatherapp",
   "version": "1.0.0",
-  "description": "\"# WeatherApp\" \r \"# WeatherApp\" \r \"# WeatherApp\"",
+  "description": "Shane Kleinbeck\r Weather App",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,11 +16,14 @@
     "url": "https://github.com/ShaneKleinbeck/WeatherApp/issues"
   },
   "homepage": "https://github.com/ShaneKleinbeck/WeatherApp#readme",
-  "devDependencies": {
-    "ejs": "^2.5.5",
+  "dependencies": {
+    "ejs": "^2.5.6",
     "express": "^4.14.1",
+    "hover.css": "^2.0.2",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0",
-    "hover.css": "^2.0.2"
+    "gulp-sass": "^3.1.0"
   }
 }
