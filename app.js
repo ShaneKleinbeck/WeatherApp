@@ -62,7 +62,6 @@ app.route('/')
 						currentWind: currentWind,
 						currentDay: currentDay,
 						remainingDays: remainingDays
-						// remainingIcons: remainingIcons
 				});
 			} else {
 				console.log(error);
