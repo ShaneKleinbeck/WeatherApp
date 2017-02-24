@@ -2,68 +2,115 @@ body{
    font-family: serif;
    max-height: 100vh;
    height: 100vh;
+	background: #bdc3c7; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #bdc3c7 , #2c3e50); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #bdc3c7 , #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.deepshadow {
+    color: white;
+    letter-spacing: .1em;
+    text-shadow: 
+      0 -1px 0 #fff, 
+      0 1px 0 #2e2e2e, 
+      0 2px 0 #2c2c2c, 
+      0 3px 0 #2a2a2a, 
+      0 4px 0 #282828, 
+  }
+
 .weather-main{
-   background-color: lightblue;
    height: 75vh;
 }
 .seven-day-forecast{
-   background-color: lightgreen;
+	background: rgba(255,255,255,.2);
    height: 25vh;
    .current-day-forecast {
       text-align: center;
-      background-color: lightgreen;
+		height: 100%;
       #current-day-left{
          height: 100%;
          .vmiddle{
-               position: relative;
-               top: 40%;
-               transform: translateY(-50%); 
-               #currentTemp{
-                  font-size: 9em;
-                  margin-bottom: 0; }
-               .degree{
-                  font-size: .4em;
+				height: 100%;
+				color: white;
+				font-size: 2.5em;
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%); 
+				.day-left-row1 {
+					height: 65%;
+					position: relative;
+					left: 15%;
+					#currentTemp {
+						position: relative;
+						top: 6%;
+						font-size: 15vh;
+					}
+					.degree {
+						font-size: .4em;
                   position: absolute;
-                  padding-top: .2em; }
-               #currentDay{
-                  font-size: 1.5em;
-                  margin-top: 0;
-                  position: relative; } } }
+                  padding-top: .2em;
+					}
+				}
+				.day-left-row2 {
+					height: 35%;
+					position: relative;
+					left: 15%;
+					#currentDay {
+						font-size: 2vh;
+						position: relative;
+						top: 30%;
+					}
+				}
+			} 
+		}
       .current-day-right{
          height: 100%;
          .vmiddle{
-               position: relative;
-               top: 40%;
-               transform: translateY(-50%);
-               .currentIcon{
-                  height: 85%;
-                  position: relative;
-                  top: 1.7em; }
-               #currentWind{
-                  font-size: 1.5em;
-                  position: relative;
-                  bottom: .8em; } } } }
+				color: white;
+				font-size: 2.5em;
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%); 
+				width: 100%;
+				.day-right-row3 {
+					height: 65%;
+					position: relative;
+					right: 15%;
+					#currentIcon {
+						font-size: 15vh;
+						position: relative;
+						top: 15%;
+					}
+				}
+				.day-right-row4 {
+					height: 35%;
+					position: relative;
+					right: 15%;
+					#currentWind {
+						font-size: 2vh;
+						position: relative;
+						top: 30%;
+					}
+				}
+			} 
+		} 
+	}
    .remaining-days-forecast{
       text-align: center;
       height: 100%;
       .remaining-day{
          height: 100%;
-         background-color: orange;
-         border-left: 1px solid rgb(127, 0, 0);
-         border-left: 1px solid rgba(255, 0, 0, .0);
-         -webkit-background-clip: padding-box; /* for Safari */
-         background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+         border-left: 1px solid #758085;
          .vmiddle{
-               font-size: 2.5em;
-               position: relative;
-               top: 50%;
-               transform: translateY(-50%); 
-               .remaining-day-text {
-                  font-size: .6em; }
-               .remaining-day-icon {
-                  padding: 0 0 0 0; }
+				color: white;
+				font-size: 2.5em;
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%); 
+				.remaining-day-text {
+					font-size: .6em; }
+				.remaining-day-icon {
+					padding: .8em 0 .8em 0; }
          }
       }
    }

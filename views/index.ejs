@@ -37,15 +37,23 @@
 				<div class="col-lg-4 current-day-forecast">
 					<div class="row">
 						<div class="col-xs-6" id="current-day-left">
-							<div class="vmiddle" id="current-day-left-vmiddle">
-								<h1 id="currentTemp"><%= currentTemp %><span class="degree">º</span></h1>
-								<h5 id="currentDay"><%= currentDay %></h5>
+							<div class="vmiddle">
+								<div class="row day-left-row1">				
+									<h1 id="currentTemp"><%= currentTemp %><span class="degree">º</span></h1>							
+								</div>
+								<div class="row day-left-row2">
+									<h5 id="currentDay"><%= currentDay %></h5>	
+								</div>
 							</div>
 						</div>
 						<div class="col-xs-6 current-day-right">
-							<div class="vmiddle" id="current-day-right-vmiddle">
-								<img src="/public/media/SVG/<%= currentIcon %>" class="currentIcon"></img>
-								<h5 id="currentWind"><%= currentWind %> Mph</h5>
+							<div class="vmiddle">
+								<div class="row day-right-row3">
+									<h5 id="currentIcon"><i class="wi <%= currentIcon %>"></i></h5>
+								</div>
+								<div class="row day-right-row4">
+									<h5 id="currentWind"><%= currentWind %> Mph / <%= apparentTemp %><span class="degree">º</span></h5>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -55,43 +63,43 @@
 						<div class="col-xs-2 remaining-day">
 							<div class="vmiddle">
 								<h5 class="remaining-day-text"><%= remainingDays[1]['day'] %></h5>
-								<img class="remaining-day-icon" src="/public/media/SVG/<%= remainingDays[1]['icon'] %>"></img>
-								<h5 class="remaining-day-text">80º</h5>
+								<i class="remaining-day-icon wi <%= remainingDays[1]['icon'] %>"></i>
+								<h5 class="remaining-day-text"><%= remainingDays[1]['temp'] %><span class="degree">º</span></h5>
 							</div>
 						</div>
 						<div class="col-xs-2 remaining-day">
 							<div class="vmiddle">
 								<h5 class="remaining-day-text"><%= remainingDays[2]['day'] %></h5>
-								<img class="remaining-day-icon" src="/public/media/SVG/<%= remainingDays[2]['icon'] %>"></img>
-								<h5 class="remaining-day-text">80º</h5>
+								<i class="remaining-day-icon wi <%= remainingDays[2]['icon'] %>"></i>
+								<h5 class="remaining-day-text"><%= remainingDays[2]['temp'] %><span class="degree">º</span></h5>
 							</div>
 						</div>
 						<div class="col-xs-2 remaining-day">
 							<div class="vmiddle">
 								<h5 class="remaining-day-text"><%= remainingDays[3]['day'] %></h5>
-								<img class="remaining-day-icon" src="/public/media/SVG/<%= remainingDays[3]['icon'] %>"></img>
-								<h5 class="remaining-day-text">80º</h5>
+								<i class="remaining-day-icon wi <%= remainingDays[3]['icon'] %>"></i>
+								<h5 class="remaining-day-text"><%= remainingDays[3]['temp'] %><span class="degree">º</span></h5>
 							</div>
 						</div>
 						<div class="col-xs-2 remaining-day">
 							<div class="vmiddle">
 								<h5 class="remaining-day-text"><%= remainingDays[4]['day'] %></h5>
-								<img class="remaining-day-icon" src="/public/media/SVG/<%= remainingDays[4]['icon'] %>"></img>
-								<h5 class="remaining-day-text">80º</h5>
+								<i class="remaining-day-icon wi <%= remainingDays[4]['icon'] %>"></i>
+								<h5 class="remaining-day-text"><%= remainingDays[4]['temp'] %><span class="degree">º</span></h5>
 							</div>
 						</div>
 						<div class="col-xs-2 remaining-day">
 							<div class="vmiddle">
 								<h5 class="remaining-day-text"><%= remainingDays[5]['day'] %></h5>
-								<img class="remaining-day-icon" src="/public/media/SVG/<%= remainingDays[5]['icon'] %>"></img>
-								<h5 class="remaining-day-text">80º</h5>
+								<i class="remaining-day-icon wi <%= remainingDays[5]['icon'] %>"></i>
+								<h5 class="remaining-day-text"><%= remainingDays[5]['temp'] %><span class="degree">º</span></h5>
 							</div>
 						</div>
 						<div class="col-xs-2 remaining-day">
 							<div class="vmiddle">
 								<h5 class="remaining-day-text"><%= remainingDays[6]['day'] %></h5>
-								<img class="remaining-day-icon" src="/public/media/SVG/<%= remainingDays[6]['icon'] %>"></img>
-								<h5 class="remaining-day-text">80º</h5>
+								<i class="remaining-day-icon wi <%= remainingDays[6]['icon'] %>"></i>
+								<h5 class="remaining-day-text"><%= remainingDays[6]['temp'] %><span class="degree">º</span></h5>
 							</div>
 						</div>
 					</div>
