@@ -2,20 +2,19 @@
 
 var pickIcon = function(day){
    var icon = {
-      'clear-day': 'Sun.svg',
-      'clear-night': 'Moon.svg',
-      'rain': 'Cloud-Rain.svg',
-      'snow': 'Cloud-Snow.svg',
-      'sleet': 'Cloud-Snow.svg',
-      'wind': 'Wind.svg',
-      'fog': 'Cloud-Fog.svg',
-      'cloudy': 'Cloud.svg',
-      'partly-cloudy-day': 'Cloud-Sun.svg',
-      'partly-cloudy-night': 'Cloud-Moon.svg',
-      'hail': 'Cloud-Hail.svg',
-      'thunderstorm': 'Cloud-Lightning.svg',
-      'tornado': 'Tornado.svg',
-      'default': 'Cloud.svg'
+      'clear-day': 'wi-day-sunny',
+      'clear-night': 'wi-night-clear',
+      'rain': 'wi-day-rain',
+      'snow': 'wi-snow',
+      'sleet': 'wi-sleet',
+      'wind': 'wi-strong-wind',
+      'fog': 'wi-fog',
+      'cloudy': 'wi-cloud',
+      'partly-cloudy-day': 'wi-day-cloudy',
+      'partly-cloudy-night': 'wi-day-cloudy',
+      'hail': 'wi-hail',
+      'thunderstorm': 'wi-thunderstorm',
+      'tornado': 'wi-tornado'
    };
    return icon[day];
 };
