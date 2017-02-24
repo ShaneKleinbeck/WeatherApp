@@ -11,6 +11,7 @@ var weatherIcon = require('./public/js/weather-icon.js');
 var data = null;
 var currentIcon = null;
 var currentTemp = null;
+var lowTemp = null;
 var currentWind = null;
 var currentDay = null;
 var remainingDays = null;
@@ -31,37 +32,45 @@ app.route('/')
 				var data = JSON.parse(body);
 				var currentIcon = weatherIcon.pickIcon(data['currently']['icon']);
 				var currentTemp = Math.round(data['currently']['temperature']);
+				var apparentTemp = Math.round(data['currently']['apparentTemperature']);
 				var currentWind = Math.round(data['currently']['windSpeed']);
 				var currentDay = moment.unix(data['currently']['time']).format('dddd, Do');
 				var remainingDays = {
 					1: { 
 						'day': moment.unix(data['daily']['data'][1]['time']).format('dddd'),
-						'icon': weatherIcon.pickIcon(data['daily']['data'][1]['icon']) },
+						'icon': weatherIcon.pickIcon(data['daily']['data'][1]['icon']),
+						'temp': Math.round(data['daily']['data'][1]['temperatureMax']) },
 					2: {
 						'day': moment.unix(data['daily']['data'][2]['time']).format('dddd'),
-						'icon': weatherIcon.pickIcon(data['daily']['data'][2]['icon']) },
+						'icon': weatherIcon.pickIcon(data['daily']['data'][2]['icon']),
+						'temp': Math.round(data['daily']['data'][2]['temperatureMax']) },
 					3: {
 						'day': moment.unix(data['daily']['data'][3]['time']).format('dddd'),
-						'icon': weatherIcon.pickIcon(data['daily']['data'][3]['icon']) },
+						'icon': weatherIcon.pickIcon(data['daily']['data'][3]['icon']),
+						'temp': Math.round(data['daily']['data'][3]['temperatureMax']) },
 					4: {
 						'day': moment.unix(data['daily']['data'][4]['time']).format('dddd'),
-						'icon': weatherIcon.pickIcon(data['daily']['data'][4]['icon']) },
+						'icon': weatherIcon.pickIcon(data['daily']['data'][4]['icon']),
+						'temp': Math.round(data['daily']['data'][4]['temperatureMax']) },
 					5: {
 						'day': moment.unix(data['daily']['data'][5]['time']).format('dddd'),
-						'icon': weatherIcon.pickIcon(data['daily']['data'][5]['icon']) },
+						'icon': weatherIcon.pickIcon(data['daily']['data'][5]['icon']),
+						'temp': Math.round(data['daily']['data'][5]['temperatureMax']) },
 					6: {
 						'day': moment.unix(data['daily']['data'][6]['time']).format('dddd'),
-						'icon': weatherIcon.pickIcon(data['daily']['data'][6]['icon'])
+						'icon': weatherIcon.pickIcon(data['daily']['data'][6]['icon']),
+						'temp': Math.round(data['daily']['data'][6]['temperatureMax'])
 					}
 				};
 
 				// Render Data to Index
 				res.render('index.ejs', { 
-						currentIcon: currentIcon,
-						currentTemp: currentTemp,
-						currentWind: currentWind,
-						currentDay: currentDay,
-						remainingDays: remainingDays
+					currentIcon: currentIcon,
+					currentTemp: currentTemp,
+					apparentTemp: apparentTemp,
+					currentWind: currentWind,
+					currentDay: currentDay,
+					remainingDays: remainingDays
 				});
 			} else {
 				console.log(error);
