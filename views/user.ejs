@@ -1,0 +1,121 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta charset="utf-8">
+<title>Weather</title>
+<meta name="author" content="Shane Kleinbeck">
+
+<!-- Mobile Specific Metas
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- FONT
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+<!-- CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="public/css/weather-icons.css">
+<link rel="stylesheet" href="public/css/styles.css">
+
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row main">
+		<input type="text" id="cityInput" placeholder="Davie, FL">
+	</div>
+	<!-- Weather Section -->
+	<div class="row seven-day-forecast">
+		<div class="col-lg-12">
+			<div class="row">
+				<div class="col-lg-4 current-day-forecast">
+					<div class="row">
+						<div class="col-xs-6" id="current-day-left">
+							<div class="vmiddle">
+								<div class="row day-left-row1">				
+									<h1 id="currentTemp"><%= currentTemp %><span class="degree">º</span></h1>							
+								</div>
+								<div class="row day-left-row2">
+									<h5 id="currentDay"><%= currentDay %></h5>	
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-6 current-day-right">
+							<div class="vmiddle">
+								<div class="row day-right-row3">
+									<h5 id="currentIcon"><i class="wi <%= currentIcon %>"></i></h5>
+								</div>
+								<div class="row day-right-row4">
+									<h5 id="currentWind"><%= currentWind %> Mph / <%= apparentTemp %><span class="degree">º</span></h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<div class="row remaining-days-forecast">
+						<div class="col-xs-2 remaining-day">
+							<div class="vmiddle">
+								<h5 class="remaining-day-text"><%= remainingDays[1]['day'] %></h5>
+								<i class="remaining-day-icon wi <%= remainingDays[1]['icon'] %>"></i>
+								<h5 class="remaining-day-text"><%= remainingDays[1]['temp'] %><span class="degree">º</span></h5>
+							</div>
+						</div>
+						<div class="col-xs-2 remaining-day">
+							<div class="vmiddle">
+								<h5 class="remaining-day-text"><%= remainingDays[2]['day'] %></h5>
+								<i class="remaining-day-icon wi <%= remainingDays[2]['icon'] %>"></i>
+								<h5 class="remaining-day-text"><%= remainingDays[2]['temp'] %><span class="degree">º</span></h5>
+							</div>
+						</div>
+						<div class="col-xs-2 remaining-day">
+							<div class="vmiddle">
+								<h5 class="remaining-day-text"><%= remainingDays[3]['day'] %></h5>
+								<i class="remaining-day-icon wi <%= remainingDays[3]['icon'] %>"></i>
+								<h5 class="remaining-day-text"><%= remainingDays[3]['temp'] %><span class="degree">º</span></h5>
+							</div>
+						</div>
+						<div class="col-xs-2 remaining-day">
+							<div class="vmiddle">
+								<h5 class="remaining-day-text"><%= remainingDays[4]['day'] %></h5>
+								<i class="remaining-day-icon wi <%= remainingDays[4]['icon'] %>"></i>
+								<h5 class="remaining-day-text"><%= remainingDays[4]['temp'] %><span class="degree">º</span></h5>
+							</div>
+						</div>
+						<div class="col-xs-2 remaining-day">
+							<div class="vmiddle">
+								<h5 class="remaining-day-text"><%= remainingDays[5]['day'] %></h5>
+								<i class="remaining-day-icon wi <%= remainingDays[5]['icon'] %>"></i>
+								<h5 class="remaining-day-text"><%= remainingDays[5]['temp'] %><span class="degree">º</span></h5>
+							</div>
+						</div>
+						<div class="col-xs-2 remaining-day">
+							<div class="vmiddle">
+								<h5 class="remaining-day-text"><%= remainingDays[6]['day'] %></h5>
+								<i class="remaining-day-icon wi <%= remainingDays[6]['icon'] %>"></i>
+								<h5 class="remaining-day-text"><%= remainingDays[6]['temp'] %><span class="degree">º</span></h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- JS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="public/js/index.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!-- End Document
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

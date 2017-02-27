@@ -7,7 +7,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "Windows",
             "program": "${workspaceRoot}\\app.js",
             "cwd": "${workspaceRoot}"
         },

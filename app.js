@@ -3,6 +3,13 @@ var express = require('express');
 var app = express();
 var request = require('request');
 var moment = require('moment');
+var mongoose = require('mongoose');
+var passport = require('passport');
+var flash = require('connect-flash');
+var morgan       = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser   = require('body-parser');
+var session      = require('express-session');
 
 // Local Imports
 var weatherIcon = require('./public/js/weather-icon.js');
@@ -10,8 +17,26 @@ var weatherIcon = require('./public/js/weather-icon.js');
 // Set Middleware For Static Files
 app.use(express.static(__dirname + '/'));
 
+// Middleware For Authentication
+app.use(morgan('dev')); // log every request to the console
+app.use(cookieParser()); // read cookies (needed for auth)
+app.use(bodyParser.json()); // get information from html forms
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// required for passport
+app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
+
 // Main Route
 app.route('/')
+	.get(function(req, res){
+		res.render('index.ejs');
+	})
+
+// User Route
+app.route('/user')
   	.get(function(req, res){
 
 		// Request API JSON From Google
@@ -63,7 +88,7 @@ app.route('/')
 						};
 
 						// Render Data to Index
-						res.render('index.ejs', { 
+						res.render('user.ejs', { 
 							currentIcon: currentIcon,
 							currentTemp: currentTemp,
 							apparentTemp: apparentTemp,
